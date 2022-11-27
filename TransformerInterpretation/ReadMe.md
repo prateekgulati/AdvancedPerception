@@ -70,12 +70,18 @@ For the experimentation, I have used an 8 CPU with a v100 Intel GPU enabled with
 
 ## 3 Results
 
-![**Figure 1**: Embeddings from BERT, Layer 1, 2, 11 and 12; Row 1: Dimensionality reduction by tSNE, Row 2: Dimensionality reduction by UMAP](TransformerInterpretation/static/Figure1.png)
+![Figure 1: Embeddings from BERT, Layer 1, 2, 11 and 12; Row 1: Dimensionality reduction by tSNE, Row 2: Dimensionality reduction by UMAP](/TransformerInterpretation/static/Figure1.png) 
+
+**Figure 1**: *Embeddings from BERT, Layer 1, 2, 11 and 12; Row 1: Dimensionality reduction by tSNE, Row 2: Dimensionality reduction by UMAP*
 
  
-![**Figure 2**: Embeddings from RoBERTa, Layer 1, 2, 11 and 12; Row 1: Dimensionality reduction by tSNE, Row 2: Dimensionality reduction by UMAP](TransformerInterpretation/static/Figure2.png)
+![Figure 2: Embeddings from RoBERTa, Layer 1, 2, 11 and 12; Row 1: Dimensionality reduction by tSNE, Row 2: Dimensionality reduction by UMAP](/TransformerInterpretation/static/Figure2.png)
 
-![**Figure 3**: Embeddings from ALBERT, Layer 1, 2, 11 and 12; Row 1: Dimensionality reduction by tSNE, Row 2: Dimensionality reduction by UMAP](TransformerInterpretation/static/Figure3.png)
+**Figure 2**: *Embeddings from RoBERTa, Layer 1, 2, 11 and 12; Row 1: Dimensionality reduction by tSNE, Row 2: Dimensionality reduction by UMAP*
+
+![Figure 3: Embeddings from ALBERT, Layer 1, 2, 11 and 12; Row 1: Dimensionality reduction by tSNE, Row 2: Dimensionality reduction by UMAP](/TransformerInterpretation/static/Figure3.png)
+
+**Figure 3**: *Embeddings from ALBERT, Layer 1, 2, 11 and 12; Row 1: Dimensionality reduction by tSNE, Row 2: Dimensionality reduction by UMAP*
 
 BERT: tSNE results in a more spread-out dimensionality reduction for all four layers. But in both representations, the embeddings in the last layer seem more clustered in comparison to layers 1 and 2.
 
