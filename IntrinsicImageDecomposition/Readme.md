@@ -1,5 +1,5 @@
-﻿
-#Intrinsic Imaging
+# Intrinsic Imaging
+
 *Prateek Gulati*
 
 
@@ -18,7 +18,7 @@ For the evaluation, the results of these methods are compared with each other. T
 The USI3D model uses four datasets, ShapeNet intrinsic dataset, MPI-Sintel benchmark, MIT intrinsic dataset, and Intrinsic Images in the Wild benchmark. PIENet also uses four datasets, out of which the MIT, Sintel, and IIW datasets are the same. It also uses the NED dataset.  
 ## 3. Methods
 ### 3.1 PIENet
-`	`The PIENet’s architecture has a) a shared encoder for CCR and image which learns illumination invariant reflectance, and illumination and reflectance features respectively; b) a Linked Edge Decoder to learn a relational representation of the cues; c) an Unrefined Decoder which takes input from a Linked edge decoder passed to a layer of attention and hence able to focus on global consistencies; d) Local Refinement Module which takes concatenated input from different decoders, calibrates it, encodes it to embedding space and separate decoders to generate refined reflectance and shading respectively.
+The PIENet’s architecture has a) a shared encoder for CCR and image which learns illumination invariant reflectance, and illumination and reflectance features respectively; b) a Linked Edge Decoder to learn a relational representation of the cues; c) an Unrefined Decoder which takes input from a Linked edge decoder passed to a layer of attention and hence able to focus on global consistencies; d) Local Refinement Module which takes concatenated input from different decoders, calibrates it, encodes it to embedding space and separate decoders to generate refined reflectance and shading respectively.
 ### 3.2 USI3D
 The USI3D architecture can be stated as a) Content-sharing which has an encoder to extract content code which is passed to generators to generate a decomposition layer for reflectance and shading respectively, b) a mapping module to infer prior code from the image set, c) autoencoders which has bidirectional reconstruction constraints which enable reconstruction in both directions. 
 ## 4 Experiments
@@ -28,13 +28,13 @@ As a starting point, I referred to Partha Das’s GitHub repository which has th
 
 ![figure1](/IntrinsicImageDecomposition/assets/figure1.png)
 
-**Figure 1**: *Reflectance and Shade from PIENet. \*PS: The labeling has been swapped in this snippet*
+**Figure 1**: *Reflectance and Shade from PIENet.*
 ### 4.2 USI3D
 For this, I refer to Yunfei Liu’s GitHub repository which has a PyTorch implementation of the USI3D paper. The best result of this model is using the IIW dataset. The model trained with just MPI or ShapeNet doesn’t have desired results visually. For the IIW dataset, a base learning rate of 0.5 is used with Adam optimizer and a weight decay of 10-4. The last layer of the generator and discriminator has 64 features for an image as the batch size is 1. For better visual results, the individual pixel value from shading is halved. This prevents fading of the image when regenerated. 
 
 ![figure2](/IntrinsicImageDecomposition/assets/figure2.png)
 
-**Figure 2**: *Reflectance and Shade from PIENet. \*PS: The labelling has been swapped in this snippet*
+**Figure 2**: *Reflectance and Shade from PIENet.*
 ### 4.3 **Visualization**
 For the results, we first compare some real-world samples which are unseen for both models. We see that both generate slightly different decompositions, USI3D seems to have better reflectance maps. 
 
@@ -86,5 +86,3 @@ S. Bell, K. Bala, and N. Snavely. Intrinsic images in the wild. ACM TOG, 2014
 Partha Das <https://github.com/Morpheus3000/>
 
 Yunfei Liu <https://github.com/DreamtaleCore/>
-
-`	`7
